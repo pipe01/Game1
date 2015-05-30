@@ -56,6 +56,17 @@ namespace Game1
 #region "Entities"
         public abstract List<Entity> getEntityMap();
 
+        public Entity getEntityAt(Vector2 pos)
+        {
+            foreach (Entity item in getEntityMap())
+            {
+                if (item.getPosition() == pos)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
 #endregion
     }
 
