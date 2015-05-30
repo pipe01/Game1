@@ -21,7 +21,7 @@ namespace Game1
         public abstract float getWorldGravity();
 
         public abstract Block[,] getBlockMap();
-        public abstract Entity getEntity
+        public abstract List<Entity> getEntityMap();
 
         public abstract void loadWorld();
 

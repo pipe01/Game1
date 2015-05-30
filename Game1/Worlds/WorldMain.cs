@@ -27,6 +27,8 @@ namespace Game1.Worlds
                                     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                                     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
 
+        
+
         private readonly float gravity = 4.0f; // Pixeles por segundo
 
         public override void loadWorld()
