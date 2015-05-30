@@ -16,13 +16,9 @@ namespace Game1
 #region "General"
         public abstract float getWorldGravity();
         public abstract void loadWorld();
-        public abstract void loadWorld();
         public abstract WorldRenderer getRenderer();
-
-        public int getWorldLength()
-        {
-            return getBlockMap().GetLength(0) + 1;
-        }
+        public abstract int getWorldLength();
+        public abstract int getWorldPixelLength();
 #endregion
 
 #region "Blocks"

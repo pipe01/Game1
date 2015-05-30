@@ -73,6 +73,11 @@ namespace Game1
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            foreach (EntityF.Entity entity in camera.getCurrentWorld().getEntityMap())
+            {
+                entity.update();
+            }
+
             base.Update(gameTime);
         }
 
