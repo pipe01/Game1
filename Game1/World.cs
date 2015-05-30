@@ -13,25 +13,26 @@ namespace Game1
     abstract class World
     {
 
+#region "General"
+        public abstract float getWorldGravity();
+        public abstract void loadWorld();
+        public abstract void loadWorld();
+        public abstract WorldRenderer getRenderer();
+
         public int getWorldLength()
         {
             return getBlockMap().GetLength(0) + 1;
         }
+#endregion
 
-        public abstract float getWorldGravity();
-
+#region "Blocks"
         public abstract Block[,] getBlockMap();
-        public abstract List<Entity> getEntityMap();
-
-        public abstract void loadWorld();
-
-        public abstract WorldRenderer getRenderer();
-
+        
         public Block getBlockAt(int x, int y)
         {
             try
             {
-                return getBlockMap()[x,y];
+                return getBlockMap()[x, y];
             }
             catch (Exception)
             {
@@ -41,7 +42,7 @@ namespace Game1
 
         public bool testBlockAt(Block target, int x, int y)
         {
-            if (getBlockAt(x,y) == target)
+            if (getBlockAt(x, y) == target)
             {
                 return true;
             }
@@ -50,6 +51,12 @@ namespace Game1
                 return false;
             }
         }
+#endregion
+
+#region "Entities"
+        public abstract List<Entity> getEntityMap();
+
+#endregion
     }
 
     class WorldRenderer
