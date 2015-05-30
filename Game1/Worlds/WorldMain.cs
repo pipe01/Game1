@@ -26,8 +26,12 @@ namespace Game1.Worlds
                                     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                                     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                                     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
+        private List<EntityF.Entity> entityMap = new List<EntityF.Entity>();
 
-        
+        public override List<EntityF.Entity> getEntityMap()
+        {
+            return this.entityMap;
+        }
 
         private readonly float gravity = 4.0f; // Pixeles por segundo
 
